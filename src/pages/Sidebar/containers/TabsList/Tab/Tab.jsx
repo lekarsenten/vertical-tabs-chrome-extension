@@ -213,6 +213,12 @@ const Tab = ({
               </div>
 
               <div
+                onClick={(e) => function (e) {
+                    if (e && e.button == 1) {
+                        e.preventDefault();
+                        closeTabClickedHandler(e, id);
+                    }
+                }}
                 className={classNames({
                   TabContainer: true,
                   Dark: isDark,
